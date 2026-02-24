@@ -459,15 +459,42 @@ export default function Home() {
 
         {/* Pricing */}
         <section className="py-20 px-6 bg-white border-t border-slate-100">
-          <div className="mx-auto max-w-4xl text-center">
+          <div className="mx-auto max-w-5xl text-center">
             <motion.h2 variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} className="text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
               Simple, church-sized pricing
             </motion.h2>
             <motion.p variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} className="mt-4 text-lg text-slate-600 font-medium">
-              Starting at $99/mo for up to 250 members. Pilot pricing available for early partners.
+              Pick the plan that matches your active members. Annual plans available (save ~2 months).
             </motion.p>
             <motion.p variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} className="mt-2 text-sm text-slate-500">
-              Most churches are live within a week.
+              An active member is anyone who texts Numi at least once that month.
+            </motion.p>
+
+            <motion.div variants={stagger} initial="hidden" whileInView="show" viewport={{ once: true }} className="mt-12 grid gap-6 text-left md:grid-cols-3">
+              <motion.div variants={fadeUp} className="rounded-2xl border border-slate-100 bg-slate-50 p-6 shadow-sm">
+                <div className="text-xs font-bold uppercase tracking-[0.2em] text-vibrant-cyan">Starter</div>
+                <div className="mt-4 text-3xl font-bold text-slate-900">$149<span className="text-base font-semibold text-slate-500">/mo</span></div>
+                <p className="mt-2 text-slate-600 font-medium">Up to 20 active members</p>
+                <p className="mt-1 text-sm text-slate-500">$6 per additional active member</p>
+              </motion.div>
+
+              <motion.div variants={fadeUp} className="rounded-2xl border border-slate-100 bg-white p-6 shadow-sm">
+                <div className="text-xs font-bold uppercase tracking-[0.2em] text-vibrant-jade">Growth</div>
+                <div className="mt-4 text-3xl font-bold text-slate-900">$299<span className="text-base font-semibold text-slate-500">/mo</span></div>
+                <p className="mt-2 text-slate-600 font-medium">Up to 60 active members</p>
+                <p className="mt-1 text-sm text-slate-500">$5 per additional active member</p>
+              </motion.div>
+
+              <motion.div variants={fadeUp} className="rounded-2xl border border-slate-100 bg-slate-50 p-6 shadow-sm">
+                <div className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400">Scale</div>
+                <div className="mt-4 text-3xl font-bold text-slate-900">$499<span className="text-base font-semibold text-slate-500">/mo</span></div>
+                <p className="mt-2 text-slate-600 font-medium">Up to 140 active members</p>
+                <p className="mt-1 text-sm text-slate-500">$4.50 per additional active member</p>
+              </motion.div>
+            </motion.div>
+
+            <motion.p variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} className="mt-6 text-sm text-slate-500">
+              Your congregation texts Numi for free — the church provides it as a ministry tool.
             </motion.p>
           </div>
         </section>
